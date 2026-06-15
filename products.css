@@ -1,12 +1,28 @@
+header{
+background-color: #ffffff;
+    /* Premium touch: a thin, vivid blue highlight bar at the absolute top of the site */
+    border-top: 4px solid #0284c7; 
+    border-bottom: 1px solid #0284c7;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.03);
+}
+
+
 h1{
-    background-color: #0056b3;
+    color: blue;
     padding: 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-nav.logo{
+div.logo{
     color: #0284c7; /* Vibrant, modern sky-blue */
     font-size: 24px;
     font-weight: 800;
@@ -14,7 +30,7 @@ nav.logo{
 }
 
 nav a {
-    color: #64748b; /* Sleek slate gray for default links */
+    color: black; /* Sleek slate gray for default links */
     text-decoration: none;
     font-weight: 600;
     font-size: 15px;
@@ -25,7 +41,10 @@ nav a:hover {
     color: #0284c7; /* Switches smoothly to blue on hover */
 }
 
-h1:hover{
-    color: black;
-    background-color: blue;
+nav ul{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
 }
