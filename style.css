@@ -1,103 +1,172 @@
-/* 1. Global Reset & Modern Feel */
+/* ==========================================================================
+   1. GLOBAL RESET & PREMIUM FOUNDATION
+   ========================================================================== */
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
-body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    background-color: #f8fafc; /* A softer, cleaner premium white/gray */
-    color: #1e293b; /* Soft dark gray instead of harsh pure black */
-    line-height: 1.6;
+html, body {
+    height: 100%;
 }
 
-/* 2. Sleek Header & Nav Layout */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: #f1f5f9; /* Richer, ultra-clean slate background */
+    color: #0f172a;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    /* Smooth anti-aliasing to make fonts look incredibly crisp */
+    -webkit-font-smoothing: antialiased;
+}
+
+/* ==========================================================================
+   2. HIGH-STYLE NAV BAR WITH ACCENT
+   ========================================================================== */
 header {
-    background-color: #ffffff; /* Crisp white nav bar */
-    border-bottom: 2px solid #e2e8f0; /* Soft border separation */
-    padding: 15px 40px;
+    background-color: #ffffff;
+    /* Premium touch: a thin, vivid blue highlight bar at the absolute top of the site */
+    border-top: 4px solid #0284c7; 
+    border-bottom: 1px solid #e2e8f0;
+    padding: 20px 40px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05); /* Very clean shadow */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.03);
 }
 
 .logo {
-    color: #0284c7; /* Vibrant, modern sky-blue */
+    color: #0f172a; /* Dark navy logo text */
     font-size: 24px;
     font-weight: 800;
     letter-spacing: -0.5px;
 }
 
+/* Styled dot accent after the logo name */
+.logo::after {
+    content: '.';
+    color: #0284c7; /* Blue period at the end of the brand name */
+}
+
 nav ul {
     list-style: none;
     display: flex;
-    gap: 25px;
+    align-items: center;
+    gap: 12px; /* Tighter gap for pill-button styling */
 }
 
 nav a {
-    color: #64748b; /* Sleek slate gray for default links */
+    color: #475569;
     text-decoration: none;
     font-weight: 600;
-    font-size: 15px;
-    transition: color 0.2s ease; /* Makes the color transition smooth */
+    font-size: 14px;
+    padding: 8px 16px;
+    border-radius: 20px; /* Fully rounded modern pill format */
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+/* Hovering transforms the link into a sleek soft-blue background pill */
 nav a:hover {
-    color: #0284c7; /* Switches smoothly to blue on hover */
+    color: #0284c7;
+    background-color: rgba(2, 132, 199, 0.08);
 }
 
-/* 3. Polished Main Content Area */
+/* ==========================================================================
+   3. HERO DISPLAY CONTAINER (SaaS Dashboard Frame)
+   ========================================================================== */
 main {
-    max-width: 1000px;
-    margin: 60px auto;
-    padding: 0 20px;
+    max-width: 1140px;
+    margin: 50px auto;
+    padding: 60px 40px;
+    background-color: #ffffff; /* Wraps your main section inside a stunning white card */
+    border-radius: 24px; /* Smooth extra-rounded container edges */
+    border: 1px solid #e2e8f0;
     text-align: center;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.02), 0 10px 10px -5px rgba(0, 0, 0, 0.02);
+    flex: 1;
 }
 
 main h1 {
-    color: #0f172a; /* Deep navy/slate for emphasis */
-    font-size: 42px;
-    font-weight: 800;
-    letter-spacing: -1px;
-    margin-bottom: 12px;
+    color: #0f172a;
+    font-size: 52px;
+    font-weight: 900; /* Extra bold weighting */
+    letter-spacing: -2px;
+    margin-bottom: 16px;
+    line-height: 1.15;
 }
 
 main p {
     font-size: 20px;
-    color: #475569; /* Balanced slate for readability */
-    max-width: 600px;
-    margin: 0 auto 40px auto;
+    color: #64748b;
+    max-width: 620px;
+    margin: 0 auto 36px auto;
 }
 
-/* 4. Beautiful Image Display Layout */
+/* Modern Interacting Action Link */
+.cta-btn {
+    display: inline-block;
+    background-color: #0284c7;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 14px 32px;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(2, 132, 199, 0.25);
+    transition: all 0.2s ease;
+    margin-bottom: 50px;
+}
+
+.cta-btn:hover {
+    background-color: #0369a1;
+    box-shadow: 0 6px 20px rgba(2, 132, 199, 0.35);
+    transform: translateY(-2px); /* Lifts up nicely when your cursor touches it */
+}
+
+/* ==========================================================================
+   4. LUXURY SHADOW GALLERY SHOWCASE
+   ========================================================================== */
 .image-gallery {
     display: flex;
     justify-content: center;
-    gap: 24px;
+    gap: 32px;
     flex-wrap: wrap;
-    margin-top: 20px;
+    margin-top: 10px;
 }
 
 .gallery-img {
     max-width: 100%;
     height: auto;
-    width: 440px;
-    border-radius: 12px; /* Smooth, modern rounded corners */
-    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05), 0 4px 6px -4px rgba(0, 0, 0, 0.05); /* Soft, elegant shadow */
-    border: 1px solid rgba(2, 132, 199, 0.1); /* Extremely faint blue border */
-    transition: transform 0.3s ease;
+    width: 480px;
+    border-radius: 16px;
+    border: 1px solid rgba(226, 232, 240, 0.8);
+    /* High-fidelity layered depth shadow scheme */
+    box-shadow: 
+        0 4px 6px -1px rgba(0, 0, 0, 0.02), 
+        0 10px 24px -3px rgba(15, 23, 42, 0.04), 
+        0 12px 30px -4px rgba(15, 23, 42, 0.04);
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
+/* When images are hovered, they lift, sharpen up, and pop out slightly */
 .gallery-img:hover {
-    transform: translateY(-4px); /* Subtle liftoff animation when hovered */
+    transform: translateY(-8px) scale(1.01);
+    box-shadow: 0 30px 60px -15px rgba(15, 23, 42, 0.12);
 }
 
-/* 5. Minimalist Footer */
+/* ==========================================================================
+   5. DECOUPLED FOOTER
+   ========================================================================== */
 footer {
     text-align: center;
     padding: 40px 20px;
     color: #94a3b8;
     font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
 }
