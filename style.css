@@ -1,0 +1,66 @@
+/* 1. Basic Setup */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+    color: #333333;
+}
+
+/* 2. Header & Navigation (Blue background, White text) */
+header {
+    background-color: #0056b3;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: #ffffff;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* 3. Main Content (Centered & Clean) */
+main {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+main h1 {
+    color: #0056b3;
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+main p {
+    font-size: 18px;
+    color: #666666;
+}
+
+/* 4. Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    border-top: 1px solid #eeeeee;
+    color: #777777;
+}
