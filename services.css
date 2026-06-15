@@ -1,0 +1,99 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 0;
+    padding: 0 0 20px 0; /* Changed padding to let navbar hit the screen edges */
+}
+
+nav {
+    background: #333;
+    padding: 15px;
+    text-align: right; /* Keeps links neatly on the side like the screenshot */
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-right: 15px;
+    font-weight: bold;
+}
+
+header {
+    background-color: #0044cc;
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+/* Container to keep all your main content neatly aligned and centered */
+main {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Your original section styling modernized slightly */
+section.service-card {
+    background: white;
+    margin: 30px 0;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+/* Image styling so they fit beautifully inside your cards */
+section.service-card img {
+    width: 100%;
+    max-width: 500px;  /* Stops images from becoming too giant */
+    height: auto;
+    border-radius: 6px;
+    margin-top: 15px;
+    display: block;
+}
+
+/* Horizontal line between sections */
+hr {
+    border: 0;
+    height: 1px;
+    background: #ddd;
+    margin: 40px 0;
+}
+
+/* Grid alignment for your extra benefits row */
+.benefits-section {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.benefits-section h2 {
+    margin-bottom: 25px;
+}
+
+.benefits-grid {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap; /* Keeps it responsive on phones and laptops */
+}
+
+.benefit-item {
+    background: white;
+    border-radius: 8px;
+    padding: 20px;
+    width: 280px;
+    text-align: left;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.benefit-item h3 {
+    margin-top: 0;
+    color: #0044cc;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    color: #777;
+    font-size: 0.9rem;
+}
