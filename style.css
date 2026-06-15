@@ -1,66 +1,103 @@
-/* 1. Basic Setup */
-body {
-    font-family: Arial, sans-serif;
+/* 1. Global Reset & Modern Feel */
+* {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    background-color: #ffffff;
-    color: #333333;
 }
 
-/* 2. Header & Navigation (Blue background, White text) */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: #f8fafc; /* A softer, cleaner premium white/gray */
+    color: #1e293b; /* Soft dark gray instead of harsh pure black */
+    line-height: 1.6;
+}
+
+/* 2. Sleek Header & Nav Layout */
 header {
-    background-color: #0056b3;
-    padding: 20px;
+    background-color: #ffffff; /* Crisp white nav bar */
+    border-bottom: 2px solid #e2e8f0; /* Soft border separation */
+    padding: 15px 40px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05); /* Very clean shadow */
 }
 
 .logo {
-    color: #ffffff;
+    color: #0284c7; /* Vibrant, modern sky-blue */
     font-size: 24px;
-    font-weight: bold;
+    font-weight: 800;
+    letter-spacing: -0.5px;
 }
 
 nav ul {
     list-style: none;
-    margin: 0;
-    padding: 0;
     display: flex;
-    gap: 20px;
+    gap: 25px;
 }
 
 nav a {
-    color: #ffffff;
+    color: #64748b; /* Sleek slate gray for default links */
     text-decoration: none;
-    font-weight: bold;
+    font-weight: 600;
+    font-size: 15px;
+    transition: color 0.2s ease; /* Makes the color transition smooth */
 }
 
 nav a:hover {
-    text-decoration: underline;
+    color: #0284c7; /* Switches smoothly to blue on hover */
 }
 
-/* 3. Main Content (Centered & Clean) */
+/* 3. Polished Main Content Area */
 main {
-    padding: 60px 20px;
+    max-width: 1000px;
+    margin: 60px auto;
+    padding: 0 20px;
     text-align: center;
 }
 
 main h1 {
-    color: #0056b3;
-    font-size: 36px;
-    margin-bottom: 10px;
+    color: #0f172a; /* Deep navy/slate for emphasis */
+    font-size: 42px;
+    font-weight: 800;
+    letter-spacing: -1px;
+    margin-bottom: 12px;
 }
 
 main p {
-    font-size: 18px;
-    color: #666666;
+    font-size: 20px;
+    color: #475569; /* Balanced slate for readability */
+    max-width: 600px;
+    margin: 0 auto 40px auto;
 }
 
-/* 4. Footer */
+/* 4. Beautiful Image Display Layout */
+.image-gallery {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.gallery-img {
+    max-width: 100%;
+    height: auto;
+    width: 440px;
+    border-radius: 12px; /* Smooth, modern rounded corners */
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05), 0 4px 6px -4px rgba(0, 0, 0, 0.05); /* Soft, elegant shadow */
+    border: 1px solid rgba(2, 132, 199, 0.1); /* Extremely faint blue border */
+    transition: transform 0.3s ease;
+}
+
+.gallery-img:hover {
+    transform: translateY(-4px); /* Subtle liftoff animation when hovered */
+}
+
+/* 5. Minimalist Footer */
 footer {
     text-align: center;
-    padding: 20px;
-    border-top: 1px solid #eeeeee;
-    color: #777777;
+    padding: 40px 20px;
+    color: #94a3b8;
+    font-size: 14px;
 }
