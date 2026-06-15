@@ -1,6 +1,4 @@
-/* ==========================================================================
-   1. GLOBAL RESET & PREMIUM FOUNDATION
-   ========================================================================== */
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -22,9 +20,7 @@ body {
     -webkit-font-smoothing: antialiased;
 }
 
-/* ==========================================================================
-   2. HIGH-STYLE NAV BAR WITH ACCENT
-   ========================================================================== */
+
 header {
     background-color: #ffffff;
     /* Premium touch: a thin, vivid blue highlight bar at the absolute top of the site */
@@ -67,18 +63,16 @@ nav a {
     font-size: 14px;
     padding: 8px 16px;
     border-radius: 20px; /* Fully rounded modern pill format */
-    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    
 }
 
-/* Hovering transforms the link into a sleek soft-blue background pill */
+
 nav a:hover {
     color: #0284c7;
     background-color: rgba(2, 132, 199, 0.08);
 }
 
-/* ==========================================================================
-   3. HERO DISPLAY CONTAINER (SaaS Dashboard Frame)
-   ========================================================================== */
+
 main {
     max-width: 1140px;
     margin: 50px auto;
@@ -128,9 +122,7 @@ main p {
     transform: translateY(-2px); /* Lifts up nicely when your cursor touches it */
 }
 
-/* ==========================================================================
-   4. LUXURY SHADOW GALLERY SHOWCASE
-   ========================================================================== */
+
 .image-gallery {
     display: flex;
     justify-content: center;
@@ -153,15 +145,13 @@ main p {
     transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-/* When images are hovered, they lift, sharpen up, and pop out slightly */
+
 .gallery-img:hover {
     transform: translateY(-8px) scale(1.01);
     box-shadow: 0 30px 60px -15px rgba(15, 23, 42, 0.12);
 }
 
-/* ==========================================================================
-   5. DECOUPLED FOOTER
-   ========================================================================== */
+
 footer {
     text-align: center;
     padding: 40px 20px;
