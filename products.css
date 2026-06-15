@@ -6,3 +6,26 @@ h1{
     align-items: center;
 }
 
+nav.logo{
+    color: #0284c7; /* Vibrant, modern sky-blue */
+    font-size: 24px;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+}
+
+nav a {
+    color: #64748b; /* Sleek slate gray for default links */
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 15px;
+    transition: color 0.2s ease; /* Makes the color transition smooth */
+}
+
+nav a:hover {
+    color: #0284c7; /* Switches smoothly to blue on hover */
+}
+
+h1:hover{
+    color: black;
+    background-color: blue;
+}
