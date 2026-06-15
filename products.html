@@ -1,35 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="products.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Aurora — Our Products</title>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="products.css">
 </head>
 <body>
-    <header>
-        <div class="logo">Aurora</div>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about us.html">About us</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="products.html">Products</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-    
-    <h1>Products</h1>
-    <p> Aurora Provides a wide variety of business management products.</p>
 
-    <ul>
-        <li>Aurora core work space</li>
-        <li>Aurora analytics and insights</li>
-        <li>Aurora CRM</li>
-        <li>Aurora Automate</li>
-    </ul>
-  
-    <img src="https://www.google.com/imgres?q=unsplash%20business%20meeting&imgurl=https%3A%2F%2Fimages.unsplash.com%2Fphoto-1600880292203-757bb62b4baf%3Ffm%3Djpg%26q%3D60%26w%3D3000%26auto%3Dformat%26fit%3Dcrop%26ixlib%3Drb-4.1.0%26ixid%3DM3wxMjA3fDB8MHxzZWFyY2h8MTV8fGJ1c2luZXNzJTIwbWVldGluZ3xlbnwwfHwwfHx8MA%253D%253D&imgrefurl=https%3A%2F%2Funsplash.com%2Fs%2Fphotos%2Fbusiness-meeting&docid=nfv0eLC78o4qtM&tbnid=6XkfDaaky56aTM&vet=12ahUKEwidsdOl-IiVAxW0VKQEHU0pHTMQnPAOegQIGRAB..i&w=3000&h=2000&hcb=2&ved=2ahUKEwidsdOl-IiVAxW0VKQEHU0pHTMQnPAOegQIGRAB" alt="">
+  <header>
+    <div class="logo">Au<span>ro</span>ra</div>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about us.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="products.html" class="active">Products</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="hero-strip">
+    <div class="eyebrow">Our Ecosystem</div>
+    <h1>Powerful Business Solutions.</h1>
+    <p>Aurora provides a wide variety of business management products tailored to streamline operations, unlock data insights, and scale your growth.</p>
+  </div>
+
+  <main class="page">
+    <div class="products-grid">
+      
+      <section class="product-card">
+        <div class="product-image">
+          <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=800&q=80" alt="Aurora Core Workspace Mockup">
+        </div>
+        <div class="product-info">
+          <div class="product-tag">Workspace</div>
+          <h2>Aurora Core Workspace</h2>
+          <p>The centralized control center for your entire team. Manage tasks, collaborate on shared documents in real-time, and align projects effortlessly on a sleek interface.</p>
+          <a href="contact.html" class="btn-learn">Get Started →</a>
+        </div>
+      </section>
+
+      <section class="product-card">
+        <div class="product-image">
+          <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80" alt="Aurora Analytics Dashboard">
+        </div>
+        <div class="product-info">
+          <div class="product-tag">Data & AI</div>
+          <h2>Analytics & Insights</h2>
+          <p>Turn raw numbers into actionable growth strategies. Monitor real-time performance indicators, track revenue milestones, and generate predictive reports using AI forecasting.</p>
+          <a href="contact.html" class="btn-learn">Get Started →</a>
+        </div>
+      </section>
+
+      <section class="product-card">
+        <div class="product-image">
+          <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80" alt="Customer Relations Display">
+        </div>
+        <div class="product-info">
+          <div class="product-tag">Sales CRM</div>
+          <h2>Aurora CRM</h2>
+          <p>Nurture meaningful customer relationships. Track sales pipelines, log communication records seamlessly, and close deals faster with our optimized lead tracking pipeline.</p>
+          <a href="contact.html" class="btn-learn">Get Started →</a>
+        </div>
+      </section>
+
+      <section class="product-card">
+        <div class="product-image">
+          <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80" alt="Workflow Automation Network">
+        </div>
+        <div class="product-info">
+          <div class="product-tag">Automation</div>
+          <h2>Aurora Automate</h2>
+          <p>Eliminate tedious, repetitive tasks completely. Create custom conditional triggers, sync data channels across apps, and let background bots run your daily operations smoothly.</p>
+          <a href="contact.html" class="btn-learn">Get Started →</a>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <footer>© 2026 <span>Aurora</span>. All rights reserved.</footer>
+
 </body>
 </html>

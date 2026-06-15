@@ -1,50 +1,280 @@
-header{
-background-color: #ffffff;
-    /* Premium touch: a thin, vivid blue highlight bar at the absolute top of the site */
-    border-top: 4px solid #0284c7; 
-    border-bottom: 1px solid #0284c7;
-    padding: 20px 40px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.03);
+/* ==========================================================================
+   Global Variables & Reset
+   ========================================================================== */
+:root {
+  --blue-dark:   #0a2463;
+  --blue-mid:    #1e4db7;
+  --blue-light:  #3a86ff;
+  --blue-pale:   #e8f0fe;
+  --white:       #ffffff;
+  --text-dark:   #0a2463;
+  --text-mid:    #3a5199;
+  --text-light:  #6b7a99;
+  --border:      #c5d5f5;
+  --radius:      16px;
+  --transition:  0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-
-h1{
-    color: blue;
-    padding: 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+*, *::before, *::after { 
+  box-sizing: border-box; 
+  margin: 0; 
+  padding: 0; 
 }
 
-div.logo{
-    color: #0284c7; /* Vibrant, modern sky-blue */
-    font-size: 24px;
-    font-weight: 800;
-    letter-spacing: -0.5px;
+body {
+  background: var(--white);
+  color: var(--text-dark);
+  font-family: 'Inter', sans-serif;
+  font-weight: 300;
+  min-height: 100vh;
+  line-height: 1.6;
 }
 
-nav a {
-    color: black; /* Sleek slate gray for default links */
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 15px;
-    transition: color 0.2s ease; /* Makes the color transition smooth */
+/* ==========================================================================
+   Premium Navigation Header (Unified Dark Theme)
+   ========================================================================== */
+header {
+  background: var(--blue-dark);
+  padding: 1.2rem 6%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 12px rgba(10,36,99,0.3);
 }
 
-nav a:hover {
-    color: #0284c7; /* Switches smoothly to blue on hover */
+.logo {
+  font-family: 'Syne', sans-serif;
+  font-weight: 800;
+  font-size: 1.6rem;
+  letter-spacing: -0.03em;
+  color: var(--white);
 }
 
-nav ul{
-    list-style: none;
-    display: flex;
-    align-items: center;
-    gap: 12px;
+.logo span { 
+  color: var(--blue-light); 
+}
 
+.nav-links {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+  align-items: center;
+}
+
+.nav-links a {
+  color: rgba(255,255,255,0.7);
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 400;
+  transition: color var(--transition);
+}
+
+.nav-links a:hover, .nav-links a.active { 
+  color: var(--white); 
+}
+
+.nav-links a.active {
+  border-bottom: 2px solid var(--blue-light);
+  padding-bottom: 2px;
+}
+
+/* ==========================================================================
+   Hero Banner Section
+   ========================================================================== */
+.hero-strip {
+  background: linear-gradient(135deg, var(--blue-dark) 0%, var(--blue-mid) 100%);
+  padding: 5rem 6% 4rem;
+  color: var(--white);
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--blue-light);
+  margin-bottom: 1rem;
+}
+
+.eyebrow::before {
+  content: '';
+  width: 24px;
+  height: 2px;
+  background: var(--blue-light);
+}
+
+.hero-strip h1 {
+  font-family: 'Syne', sans-serif;
+  font-size: clamp(2.2rem, 5vw, 3.5rem);
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+  margin-bottom: 1rem;
+}
+
+.hero-strip p {
+  max-width: 600px;
+  color: rgba(255,255,255,0.8);
+  font-size: 1.05rem;
+  line-height: 1.75;
+}
+
+/* ==========================================================================
+   Products Grid & Dynamic Showcase Cards
+   ========================================================================== */
+.page {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 5rem 6% 6rem;
+}
+
+.products-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+.product-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  box-shadow: 0 10px 30px rgba(10,36,99,0.05);
+  transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition);
+}
+
+.product-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--blue-light);
+  box-shadow: 0 20px 40px rgba(58,134,255,0.12);
+}
+
+/* Alternating layout structure (Flips every second card for professional look) */
+.product-card:nth-child(even) {
+  direction: rtl;
+}
+.product-card:nth-child(even) .product-info {
+  direction: ltr;
+}
+
+/* Image Container styling */
+.product-image {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 300px;
+  overflow: hidden;
+  background: var(--blue-pale);
+}
+
+.product-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.product-card:hover .product-image img {
+  transform: scale(1.04);
+}
+
+/* Product Typography & Content Inner Blocks */
+.product-info {
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.product-tag {
+  background: var(--blue-pale);
+  color: var(--blue-mid);
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 0.35rem 0.8rem;
+  border-radius: 20px;
+  margin-bottom: 1rem;
+}
+
+.product-info h2 {
+  font-family: 'Syne', sans-serif;
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  letter-spacing: -0.02em;
+  margin-bottom: 1rem;
+}
+
+.product-info p {
+  color: var(--text-light);
+  font-size: 0.95rem;
+  line-height: 1.65;
+  margin-bottom: 2rem;
+}
+
+/* Interactive Call to Action Button */
+.btn-learn {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+  font-family: 'Syne', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--blue-mid);
+  transition: color var(--transition), transform var(--transition);
+}
+
+.btn-learn:hover {
+  color: var(--blue-light);
+  transform: translateX(4px);
+}
+
+/* ==========================================================================
+   Footer Component
+   ========================================================================== */
+footer {
+  background: var(--blue-dark);
+  color: rgba(255,255,255,0.6);
+  text-align: center;
+  padding: 1.8rem 6%;
+  font-size: 0.82rem;
+  margin-top: auto;
+}
+
+footer span { 
+  color: var(--blue-light); 
+}
+
+/* ==========================================================================
+   Responsive Design Breakpoints
+   ========================================================================== */
+@media (max-width: 868px) {
+  .product-card, .product-card:nth-child(even) {
+    grid-template-columns: 1fr;
+    direction: ltr;
+  }
+  
+  .product-image {
+    height: 240px;
+    min-height: auto;
+  }
+  
+  .product-info {
+    padding: 2rem;
+  }
+  
+  .nav-links { 
+    display: none; 
+  }
 }
