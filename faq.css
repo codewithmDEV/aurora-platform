@@ -1,16 +1,17 @@
 body{
     margin: 0;
     padding: 0;
-    background-color: rgb(191, 191, 235);
+    background-color: rgb(226, 226, 236);
     line-height: 1.8;
     font-family: Arial, Helvetica, sans-serif;
 }
-.sub-header{height: 15vh;
+.sub-header{
+    height: 15vh;
     width: 100%;
-    background-image: linear-gradient( rgba(40, 67, 93, 0.764)),url(banner4.jpg);
+    background-image: linear-gradient( rgba(41, 47, 53, 0.764)),url(banner4.jpg);
     background-position: center;
     text-align: center;
-    color: #fff3f3;
+    color: #08f1a0;
 
 }
 
@@ -74,9 +75,9 @@ p{
 }
 .faq-col{
     flex-basis: 32%;
-    background: #a17474;
+    background: #91e9d4;
     border-radius: 10px;
-    margin-bottom: 5%;
+    margin-bottom: 10%;
     padding: 20px 12px;
     box-sizing: border-box;
 }
@@ -87,4 +88,23 @@ h3{
 }
 .faq-col:hover{
     box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.2);
+}
+.various-q{
+    margin: auto;
+     width: 80%;
+    text-align: left;
+    padding-top: 100px;
+    border-radius: 10px;
+    margin-bottom: 10%;
+    padding: 20px 12px;
+}
+.various-q ol li{
+    margin: auto;
+    font-weight:500;
+    font-size: 20px;
+}
+footer{
+    height: 7vh;
+    color: #e9e3e3;
+    background-color: #4be1aa;
 }

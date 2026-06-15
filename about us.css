@@ -1,0 +1,279 @@
+/* ── Reset ── */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ── Base ── */
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #ffffff;
+  color: #1a1a1a;
+}
+
+/* ── Page wrapper ── */
+.aurora-wrap {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 1.5rem 4rem;
+}
+
+/* ── HERO ── */
+#about-hero {
+  text-align: center;
+  padding: 4rem 1rem 3rem;
+  border-bottom: 1px solid #e8e8e8;
+}
+
+#about-hero h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 48px;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+#about-hero h1 span {
+  color: #534AB7;
+}
+
+#about-hero p {
+  font-size: 18px;
+  color: #555;
+  line-height: 1.8;
+  max-width: 580px;
+  margin: 0 auto;
+}
+
+/* ── SHARED SECTION STYLES ── */
+section {
+  padding: 3rem 0;
+  border-bottom: 1px solid #e8e8e8;
+}
+
+section h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 32px;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin-bottom: 1rem;
+}
+
+section p {
+  font-size: 16px;
+  color: #555;
+  line-height: 1.8;
+}
+
+/* ── MISSION ── */
+#mission {
+  background-color: #f7f6ff;
+  padding: 3rem 2rem;
+  border-radius: 12px;
+  margin-top: 2rem;
+}
+
+#mission h2 {
+  color: #534AB7;
+}
+
+/* ── VISION ── */
+#vision {
+  padding: 3rem 0;
+}
+
+/* ── STORY ── */
+#story {
+  border-left: 4px solid #534AB7;
+  padding-left: 2rem;
+}
+
+/* ── VALUES ── */
+#values h2 {
+  margin-bottom: 1.5rem;
+}
+
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1.25rem;
+}
+
+.value-card {
+  background: #ffffff;
+  border: 1px solid #e0dff7;
+  border-radius: 12px;
+  padding: 1.5rem;
+}
+
+.value-card h3 {
+  font-size: 16px;
+  font-weight: 600;
+  color: #534AB7;
+  margin-bottom: 0.5rem;
+}
+
+.value-card p {
+  font-size: 14px;
+  color: #666;
+  line-height: 1.7;
+}
+
+/* ── CTA ── */
+#cta {
+  text-align: center;
+  padding: 3rem 0 0;
+  border-bottom: none;
+}
+
+#cta h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 30px;
+  margin-bottom: 0.75rem;
+}
+
+#cta a {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.8rem 2.5rem;
+  background-color: #534AB7;
+  color: #ffffff;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+#cta a:hover {
+  background-color: #3C3489;
+}
+/* ── NAVIGATION ── */
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.2rem 2.5rem;
+  background-color: #ffffff;
+  border-bottom: 1px solid #e0dff7;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+nav .logo {
+  font-family: 'Playfair Display', serif;
+  font-size: 22px;
+  font-weight: 600;
+  color: #534AB7;
+  text-decoration: none;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li a {
+  font-family: 'Inter', sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  color: #444;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+nav ul li a:hover {
+  color: #534AB7;
+}
+/* ── Hero heading blue ── */
+#about-hero h1 {
+  color: #1a73e8;
+}
+
+/* ── Hero paragraph light green with slide-in animation ── */
+#about-hero p {
+  color: #4caf50;
+  animation: slideIn 1s ease-out;
+}
+
+/* ── Slide animation ── */
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}/* ── MISSION ── */
+#mission h2 {
+  color: #7B2FBE;
+  animation: slideRight 1s ease-out;
+}
+
+#mission p {
+  color: #e53935;
+  animation: slideRight 1.2s ease-out;
+}
+
+/* ── VISION ── */
+#vision h2 {
+  color: #1a73e8;
+  animation: slideRight 1s ease-out;
+}
+
+#vision p {
+  color: #f57c00;
+  animation: slideRight 1.2s ease-out;
+}
+
+/* ── STORY ── */
+#story h2 {
+  color: #00897b;
+  animation: slideRight 1s ease-out;
+}
+
+#story p {
+  color: #8e24aa;
+  animation: slideRight 1.2s ease-out;
+}
+
+/* ── VALUES ── */
+#values h2 {
+  color: #d81b60;
+  animation: slideRight 1s ease-out;
+}
+
+#values p {
+  color: #2e7d32;
+  animation: slideRight 1.2s ease-out;
+}
+
+/* ── CTA ── */
+#cta h2 {
+  color: #534AB7;
+  animation: slideRight 1s ease-out;
+}
+
+#cta p {
+  color: #e53935;
+  animation: slideRight 1.2s ease-out;
+}
+
+/* ── Slide RIGHT to LEFT animation ── */
+@keyframes slideRight {
+  from {
+    opacity: 0;
+    transform: translateX(80px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
